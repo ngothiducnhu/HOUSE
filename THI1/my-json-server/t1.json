@@ -1,0 +1,10 @@
+{
+  "DScarousel": [
+    { "id": 1, "img": "img/banner.jpg" },
+    { "id": 2, "img": "img/banner.jpg" },
+    { "id": 3, "img": "img/banner.jpg" }
+  ],
+  "DSTT": [
+    { "id": 1, "body": "There’s nothing quite like visiting a new city at Christmastime – from bustling shopping centres to feasts of regional cuisine. Cities across Asia celebrate with their own unique blend of Christmas tradition and local flavour to create magical experiences for all. Whether you’re looking for a winter wonde."}
+  ]
+}

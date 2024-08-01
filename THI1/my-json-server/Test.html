@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div ng-repeat="SP in SanPhamMoi">
+        <h2>{{SP.id}}</h2>
+        <h2>{{SP.tensp}}</h2>
+        <h2>{{SP.gia}}</h2>
+      </div>
+      
+      <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+          // Gọi API sử dụng $http
+          $http.get('http://localhost:3000/SanPhamMoi')
+            .then(function(response) {
+              // Xử lý dữ liệu từ API
+              $scope.SanPhamMoi = response.data;
+            })
+            .catch(function(error) {
+              // Xử lý lỗi nếu có
+              console.error('Lỗi khi tải dữ liệu:', error);
+            });
+        });
+      </script>
+      
+       
+</body>
+</html>

@@ -1,0 +1,172 @@
+header{   
+    height: 100%;
+    width: 100%;
+}
+.navTop{
+    background-color: aliceblue;
+}
+.navTop ul li a{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+.navTop ul li a:hover{
+    text-decoration: none;
+}
+.text_logo{
+    height: 140px;
+    width: 80px;
+}
+.text_logo img{
+    height: 100%;
+    width: 100%;
+}
+.navBottom{
+    background-color: white;
+}
+.navBottom ul li a{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navBottom ul li a:hover{
+    text-decoration: none;
+}
+.navBottom ul li a:active{
+    text-decoration: none;
+}
+
+.d-flex>.form-control{
+    height: 35px;
+    width: 340px;
+}
+
+.carousel-item{
+    height: 350px;
+    width: 100%;
+}
+.carousel-item img{
+    height: 100%;
+    width: 100%;
+}
+.bannerText{
+    box-shadow: 3px 0 3px;
+}
+.bannerText b{
+    font-size: 16px;
+    Color: rgb(17, 134, 250);
+}
+.card-title{
+    font-size: 16px;
+}
+.card-text b{
+    color: red;
+}
+.card {
+    border-radius: 0;
+    box-shadow: 0 0 5px gray;
+}
+.card-body {
+    text-align: center;
+}
+.card-body a{
+    background-color: rgb(30 144 255);
+}
+.card img{
+    padding: 5px;
+    transition: 500ms;   
+}
+.card img:hover{
+    padding: 0;
+}
+.tieude {
+    position: relative;
+    padding: 0px;
+    color: black;
+}
+h3 b::after{
+    content: "";
+    width: 160px;
+    border-bottom: 2px rgb(30 144 255) solid;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.danhmuc {
+    font-size: 18px;
+    text-align: left;   
+}
+.thuonghieu{
+    padding: 7px;
+    transition: 500ms;
+    border-radius: 5px;
+}
+.thuonghieu:hover{
+    padding: 0px;
+}
+
+.danhmucsp {
+    width: 100%;
+    height: 440px;
+}
+
+.danhmucsp>.d-flex{
+    width: 100%;
+    height: 440px;
+    flex-wrap: wrap;
+}
+
+.danhmucsp>.d-flex > div{
+    position: relative;
+    width: 33.33%;   
+}
+
+.danhmucsp>.d-flex > div img{
+    width: 100%;
+    height: 220px;   
+}
+
+.danhmucsp>.d-flex > div h4{
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    bottom: 0px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.over{
+    position: absolute;  
+    background-image: linear-gradient(to top,hsla(205, 83%, 58%, 0.712), rgba(234, 243, 253, 0)) ;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.d-flex>div:hover .over{
+    background: none;
+}
+
+.nav-item>.form-control{
+    height: 100%;
+    width: 400px;
+}
+.btnEmail{
+    background-color: rgb(30 144 255);
+}
+.btnEmail:hover{
+    background-color: rgb(30 144 255);
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+
+
+
+

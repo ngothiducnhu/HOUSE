@@ -1,0 +1,32 @@
+{
+    
+
+    "ChinhSach": [
+        {"id": 1, "nd": "Hư gì đổi nấy 12 tháng tại 3169 siêu thị toàn quốc (miễn phí tháng đầu)" },
+        {"id": 2, "nd": "Bảo hành chính hãng điện thoại 1 năm tại các trung tâm bảo hành hãng" },
+        {"id": 3, "nd": "Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Type C" }
+      ],
+
+    
+
+    "ChiTiet": [
+        {"id": 1, "title": "Màn hình", "nd1": "- Kích thước: 6.7 inch", "nd2": "- Super Retina XDR OLED", "nd3": "- Công nghệ ProMotion", "nd4": "- Dynamic Island" },
+        {"id": 2, "title": "Kích thước và khối lượng", "nd1": "- 159.9 mm x 76.7 mm x 8.25 mm", "nd2": "- 221 gram", "nd3": "", "nd4": "" },
+        {"id": 3, "title": "Camera", "nd1": "- Camera trước: 12MP, f/1.9", "nd2": "- Camera chính: 48MP, f/1.78", "nd3": "- Camera góc siêu rộng: 12MP, f/2.2", "nd4": "- Camera Telephoto: 12MP, f/2.8, khả năng zoom 2x và 5x" },
+        {"id": 4, "title": "Thời lượng pin", "nd1": "- Nghe nhạc: 95 tiếng", "nd2": "- Xem video: 29 tiếng", "nd3": "- Xem video (trực tuyến): 25 tiếng", "nd4": "" }
+    ],
+
+    "MuaCung": [
+        {"id": 1, "tensp": "Ốp lưng Nhựa cứng viền dẻo", "gia": "290.000₫", "hinh": "img/opdt.jpg"},
+        {"id": 2, "tensp": "Tai nghe Bluetooth True", "gia": "990.000₫", "hinh": "img/tainghe.jpeg"},
+        {"id": 3, "tensp": "Adapter sạc Type C PD 20W", "gia": "440.000₫", "hinh": "img/sac.jpg" },
+        {"id": 4, "tensp": "Miếng dán kính cường lực", "gia": "190.000₫", "hinh": "img/cuongluc.jpg"}
+    ],
+
+    "Footer":  [
+        {"id": 1, "title": "Hỗ trợ khách hàng" ,"nd1": "Lịch sử mua hàng", "nd2": "Chính sách đổi trả", "nd3":"Góp ý khiếu nại" },
+        {"id": 2, "title": "Điều khoản và chính sách" ,"nd1": "Điều khoản dịch vụ", "nd2": "Chính sách bảo mật", "nd3":"Chính sách đổi trả" },
+        {"id": 3, "title": "Tổng đài hỗ trợ" ,"nd1": "Chính sách bảo hành", "nd2": "Chính sách đổi trả", "nd3":"Góp ý khiếu nại" },
+        {"id": 4, "title": "Về chúng tôi" ,"nd1": "Giới thiệu công ty", "nd2": "Tuyển dụng", "nd3": "Góp ý" }
+      ]
+}

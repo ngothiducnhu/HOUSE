@@ -1,0 +1,10 @@
+ul li a{
+    color: black !important;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+ul li a:hover{
+    color: red !important;
+}

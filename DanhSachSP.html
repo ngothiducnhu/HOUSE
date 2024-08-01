@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách SP</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="css/danhsachsp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="myApp">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-home"></i> Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Exit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-expeditedssl"></i> Quản lý mật khẩu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-book" aria-hidden="true"></i> Quản lý danh mục</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Quản lý sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-calendar-check-o"></i> Quản lý banner</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-9" ng-controller="myCtrl1">
+        <h4><b>Sản Phẩm</b></h4>
+        <button type="button" class="btn btnThemSP" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="clear()">
+          Thêm sản phẩm</button>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header justify-content-center">
+                <h4 class="modal-title">Thêm sản phẩm</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form action="">
+
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label mb-1">Ảnh sản phẩm:</label>
+                    <!-- <input class="form-control" type="file" id="formFile"
+                      onchange="angular.element(this).scope().getFileDetails(this)"> -->
+                    <input type="button" class="form-control d-flex justify-content-start" id="posterTour"
+                      value="{{sp.hinhsp}}" ng-click="selectFile()">
+                    <input type="file" id="hiddenFileInput"
+                      onchange="angular.element(this).scope().getFileDetails(this)" style="display: none;">
+                  </div>
+                  <div class="mb-4">
+                    <input type="text" class="form-control" id="tensp" ng-model="sp.tensp"
+                      placeholder="Nhập tên sản phẩm">
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">VND</span>
+                      </div>
+                      <input class="form-control" type="text" id="gia" name="" placeholder="Nhập giá"
+                        aria-label="Recipient's text" aria-describedby="my-addon" ng-model="sp.giasp">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-modal" ng-click="insert()" onclick="return Validate()">
+                    Thêm sản phẩm</button>
+                  <button type="button" class="btn btn_Capnhat" ng-click="update()">
+                    Cập nhật</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="container mt-3">             -->
+        <table class="table table-striped" ng-controller="myCtrl2">
+          <thead>
+            <tr class="fisrt">
+              <th>Hình</th>
+              <th>Tên SP</th>
+
+              <th>Giá</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr ng-repeat="sp in SP">
+              <td class="hinh"><img src="img/{{sp.hinhsp}}" alt=""></td>
+              <td>{{sp.tensp}}</td>
+              <td>{{sp.giasp}}</td>
+              <td>
+                <button type="button" ng-click="edit($index)" class="btnSua" data-bs-toggle="modal"
+                  data-bs-target="#myModal"><i class="fa fa-edit"></i> Sửa</button>
+                <button type="button" ng-click="delete($index)" class="btnXoa"><i class="fa fa-trash"></i> Xóa</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+  var app = angular.module("myApp", []);
+
+  app.controller("myCtrl1", function ($scope, $rootScope) {
+    $rootScope.sp = {};
+
+    $scope.clear = function () {
+      $rootScope.sp = {};
+    }
+
+    // $scope.insert = function () {
+    //   $rootScope.SP.push(angular.copy($scope.sp));
+    //   $scope.clear();
+    // }
+    $scope.insert = function () {
+      $rootScope.SP.push(angular.copy($scope.sp));
+      $scope.clear();
+    }
+
+    $scope.update = function () {
+      $rootScope.SP[$rootScope.index] = angular.copy($rootScope.sp);
+    }
+    $scope.getFileDetails = function (element) {
+      $scope.sp.hinhsp = element.files[0].name;
+    }
+    $scope.selectFile = function() {
+        document.getElementById('hiddenFileInput').click();
+    };
+  });
+
+  app.controller("myCtrl2", function ($scope, $rootScope) {
+
+    $rootScope.SP = [
+      {
+        hinhsp: "lo3.png",
+        tensp: "Lò ngướng đa năng",
+        giasp: "1.790.000"
+      },
+      {
+        hinhsp: "lo4.png",
+        tensp: "Lò ngướng đa năng",
+        giasp: "1.290.000"
+      },
+      {
+        hinhsp: "nuong2.png",
+        tensp: "Lò nướng thủy tinh",
+        giasp: "1.390.000"
+      },
+      {
+        hinhsp: "nuong3.png",
+        tensp: "Lò nướng thủy tinh",
+        giasp: "2.190.000"
+      },
+      {
+        hinhsp: "tv1.png",
+        tensp: "TV QLED 60INCH",
+        giasp: "7.990.000"
+      }
+    ]
+
+    $scope.edit = function (index) {
+      $rootScope.sp = angular.copy($rootScope.SP[index]);
+      console.log($rootScope.sp);
+      $rootScope.index = index;
+    }
+
+    $scope.delete = function (index) {
+      if (confirm('Bạn có chắc muốn xóa không?')) {
+        $rootScope.SP.splice(index, 1);
+      }
+    }
+
+
+  });
+</script>

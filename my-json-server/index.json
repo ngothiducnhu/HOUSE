@@ -1,0 +1,87 @@
+{
+    "Text": [
+      {"id":1, "title": "Niềm tin", "noidung": "Luôn giữ \n đúng lời hứa và mang lại cho khách hàng nhiều trải nghiệm" },
+      {"id":2, "title": "Uy tín", "noidung": "Cam kết mang lại cho khách hàng những sản phẩm dịch vụ tốt nhất" },
+      {"id":3, "title": "Chất lượng", "noidung": "Luôn đề chất lượng sản phẩm hơn số lượng, sản phẩm tốt đi đôi với dịch vụ tốt" }
+    ],
+
+    "SanPhamMoi": [
+      { "id": 1, "tensp": "Lò Nướng bánh đa năng", "gia": "990.000₫", "hinh": "img/lo3.png" },
+      { "id": 2, "tensp": "Lò nướng bánh gia đình 25l", "gia": "1.990.000₫", "hinh": "img/lo4.png" },
+      { "id": 3, "tensp": "Lò nướng đa năng Sodium075", "gia": "1.990.000₫", "hinh": "img/lo1.png" },      
+      { "id": 4, "tensp": "Lò nướng mini Bear 3in1", "gia": "1.290.000₫", "hinh": "img/lo2.png" }
+    ],
+
+    "ChuyenTrangThuongHieu": [
+      {"id": 1, "hinh": "img/f1.png" },
+      {"id": 2, "hinh": "img/f2.png" },
+      {"id": 3, "hinh": "img/f3.png" }
+    ],
+
+    "BanChay": [
+      { "id": 1, "tensp": "Điện thoại iPhone 14 (128GB) - Chính hãng VN/A", "gia": "28.990.000₫", "hinh": "img/14.webp" },
+      { "id": 2, "tensp": "Điện thoại iPhone 14 (256GB) - Chính hãng VN/A", "gia": "29.990.000₫", "hinh": "img/141.jpg" },
+      { "id": 3, "tensp": "Điện thoại iPhone 14 (512GB) - Chính hãng VN/A", "gia": "30.390.000₫", "hinh": "img/142.webp" }
+    ],
+
+    "TiVi": [
+      { "id": 1, "tensp": "TV Casper 43UGS611 (4K/43-inch)", "gia": "6.990.000₫", "hinh": "img/tv1.png" },
+      { "id": 2, "tensp": "TV Casper 55QG8000 (4K/55-inch)", "gia": "7.790.000₫", "hinh": "img/tv2.png" }
+    ],
+
+    "DanhMuc": [
+      {"id": 1, "tensp": "Điện thoại", "hinh": "img/f1.png" },
+      {"id": 2, "tensp": "Tivi", "hinh": "img/f2.png" },
+      {"id": 3, "tensp": "Lò nướng", "hinh": "img/f3.png" },
+      {"id": 4, "tensp": "Tai nghe", "hinh": "img/f4.png" },
+      {"id": 5, "tensp": "Tủ lạnh", "hinh": "img/f5.png" },
+      {"id": 6, "tensp": "Laptop", "hinh": "img/f6.png" }
+    ],
+
+    "Footer":  [
+      {"id": 1, "title": "Hỗ trợ khách hàng" ,"nd1": "Lịch sử mua hàng", "nd2": "Chính sách đổi trả", "nd3":"Góp ý khiếu nại" },
+      {"id": 2, "title": "Điều khoản và chính sách" ,"nd1": "Điều khoản dịch vụ", "nd2": "Chính sách bảo mật", "nd3":"Chính sách đổi trả" },
+      {"id": 3, "title": "Tổng đài hỗ trợ" ,"nd1": "Chính sách bảo hành", "nd2": "Chính sách đổi trả", "nd3":"Góp ý khiếu nại" },
+      {"id": 4, "title": "Về chúng tôi" ,"nd1": "Giới thiệu công ty", "nd2": "Tuyển dụng", "nd3": "Góp ý" }
+    ],
+    "LoNuongDN": [
+        { "id": 1, "tensp": "Lò nướng bánh ukoeo T35", "gia": "2.990.000₫", "hinh": "img/lo5.png" },
+        { "id": 2, "tensp": "Lò nướng bánh gia đình 25l", "gia": "990.000₫", "hinh": "img/lo6.png" },
+        { "id": 3, "tensp": "Lò nướng đa năng Sodium075", "gia": "1.990.000₫", "hinh": "img/lo7.png" },
+        { "id": 4, "tensp": "Lò nướng mini Bear 3in1", "gia": "1.890.000₫", "hinh": "img/lo9.png" }
+    ],
+    "LoNuongCC": [
+        { "id": 1, "tensp": "Lò nướng bánh ukoeo T35", "gia": "6.990.000₫", "hinh": "img/lo8.png" },
+        { "id": 2, "tensp": "Lò nướng bánh gia đình 25l", "gia": "7.790.000₫", "hinh": "img/lo11.png" },
+        { "id": 3, "tensp": "Lò nướng mini cao cấp đa năng", "gia": "8.890.000₫", "hinh": "img/lo6.png" }
+    ],
+
+    "CarouselCT": [
+        {"id": 1, "hinh": "img/1.jpg" },
+        {"id": 2, "hinh": "img/2.jpg" },
+        {"id": 3, "hinh": "img/3.jpg" },
+        {"id": 4, "hinh": "img/4.jpg" },
+        {"id": 5, "hinh": "img/5.jpg" }
+    ],
+    "ChinhSach": [
+        {"id": 1, "nd": "Hư gì đổi nấy 12 tháng tại 3169 siêu thị toàn quốc (miễn phí tháng đầu)" },
+        {"id": 2, "nd": "Bảo hành chính hãng điện thoại 1 năm tại các trung tâm bảo hành hãng" },
+        {"id": 3, "nd": "Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Type C" }
+    ],
+    "KhuyenMai": [
+        {"id": 1, "title": "1. Ưu đãi độc quyền", "nd1": "- Trả góp 4 KHÔNG: 0% Lãi | 0đ Phụ phí | 0 chờ đợi | 0 thẻ tín dụng", "nd2": "- Tặng thêm đến 2.000.000đ khi thu cũ đổi mới", "nd3": "- Giảm thêm đến 200.000đ khi thanh toán chuyển khoản" },
+        {"id": 2, "title": "2. Ưu đãi Phụ kiện kèm máy", "nd1": "- Giảm thêm 20% Kính cường lực Zoda giá từ 312.000đ - Bảo hành 90 ngày", "nd2": "- Giảm thêm 20% Ôp lưng Zagg giá từ 350.000đ - Bảo hành 90 ngày ", "nd3": "- Giảm thêm 10% Pin dự phòng Acefast giá từ 890.000đ" }
+    ],
+    "ChiTiet": [
+        {"id": 1, "title": "Màn hình", "nd1": "- Kích thước: 6.7 inch", "nd2": "- Super Retina XDR OLED", "nd3": "- Công nghệ ProMotion", "nd4": "- Dynamic Island" },
+        {"id": 2, "title": "Kích thước và khối lượng", "nd1": "- 159.9 mm x 76.7 mm x 8.25 mm", "nd2": "- 221 gram", "nd3": "", "nd4": "" },
+        {"id": 3, "title": "Camera", "nd1": "- Camera trước: 12MP, f/1.9", "nd2": "- Camera chính: 48MP, f/1.78", "nd3": "- Camera góc siêu rộng: 12MP, f/2.2", "nd4": "- Camera Telephoto: 12MP, f/2.8, khả năng zoom 2x và 5x" },
+        {"id": 4, "title": "Thời lượng pin", "nd1": "- Nghe nhạc: 95 tiếng", "nd2": "- Xem video: 29 tiếng", "nd3": "- Xem video (trực tuyến): 25 tiếng", "nd4": "" }
+    ],
+    "MuaCung": [
+        {"id": 1, "tensp": "Ốp lưng Nhựa cứng viền dẻo", "gia": "290.000₫", "hinh": "img/opdt.jpg"},
+        {"id": 2, "tensp": "Tai nghe Bluetooth True", "gia": "990.000₫", "hinh": "img/tainghe.jpeg"},
+        {"id": 3, "tensp": "Adapter sạc Type C PD 20W", "gia": "440.000₫", "hinh": "img/sac.jpg" },
+        {"id": 4, "tensp": "Miếng dán kính cường lực", "gia": "190.000₫", "hinh": "img/cuongluc.jpg"}
+    ]
+  }

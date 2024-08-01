@@ -1,0 +1,19 @@
+body{
+    background-image: url(../img/login.jpg);
+    z-index: -1;
+}
+form{
+    height: 100%;
+    width: 30%;
+    box-shadow: 2px 2px 2px 2px;
+    margin: 5% auto;
+    border-radius: 5px;
+    z-index: 1;
+}
+.btnDangnhap{
+  background-color: rgba(0, 0, 0, 0.445);
+  color: white;
+}
+.navbar ul li a{
+    font-size: 36px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body ng-app="myApp">
+<header>
+  <nav class="navbar navTop navbar-expand-sm mb-0">
+    <div class="container-fluid">
+      <a class="navbar-brand text_logo px-2 mx-3" href="#"><b>HOUSE</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item px-5">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="#">Bảo hành</a>
+          </li>
+          <li class="nav-item">
+            <form class="d-flex mt-2">
+              <input class="form-control" type="text" placeholder="Search">
+              <button class="btn bg-light border" type="button"><i class="fa fa-search"></i></button>
+            </form>
+          </li> 
+          <li class="nav-item px-5">
+            <a class="nav-link" href="DangNhap.html">Tài khoản</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="GioHang.html">Giỏ hàng</a>
+          </li> 
+          <li class="nav-item px-5">
+            <a class="nav-link" href="LichSuMua.html">Đơn hàng</a>
+          </li>   
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navBottom navbar-expand-sm mb-0">
+    <ul class="navbar-nav justify-content-center">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle px-5" href="#" role="button" data-bs-toggle="dropdown">Tất cả danh mục</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="SanPham.html">Lò nướng</a></li>
+          <li><a class="dropdown-item" href="#">Điện thoại</a></li>
+          <li><a class="dropdown-item" href="#">Tivi</a></li>
+          <li><a class="dropdown-item" href="#">Tủ lạnh</a></li>
+          <li><a class="dropdown-item" href="#">Hỗ trợ</a></li>
+          <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href=""></a></li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="Trangchu.html">Trang chủ</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="#">Điện thoại</a>
+      </li>      
+      <li class="nav-item px-5">
+        <a class="nav-link" href="#">Tivi</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="#">Tủ lạnh</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="#">Máy giặt</a>
+      </li>
+      
+    </ul>  
+</nav>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/crsSP2.jpg" alt="" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="img/crsSP1.jpg" alt="" class="d-block w-100">
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev text-primary" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+    <div class="col-sm-4 img">  
+     <!-- <div class="sale bg-light text-danger text-center py-3"><h4><b>ƯU ĐÃI HẤP DẪN</b></h4></div>      -->
+     <div class=""><img src="img/b3sp2.jpg" alt=""> </div> 
+     <div class=""><img src="img/b3sp.jpg" alt=""> </div>
+    </div>   
+  </div>
+
+</header>
+
+    <div class="container mt-3">
+          
+        <div class="tieude py-2"><h3><b>LÒ NƯỚNG ĐA NĂNG</b></h3></div>       
+        <section class="row mt-5" ng-controller="myCtrlSP_DA">         
+          <div class="col-sm-3" ng-repeat="DN in LoNuongDN">
+            <div class="card">
+              <img class="card-img-top" src="{{DN.hinh}}" alt="Card image">
+              <div class="card-body">
+                <h3 class="card-title">{{DN.tensp}}</h3>
+                <p class="card-text"><b>{{DN.gia}}</b></p>
+                <a href="#" class="btn btn-primary">Xem sản phẩm</a>
+              </div>
+            </div> 
+          </div>      
+        </section>               
+
+        <div class="tieude mt-5 py-2"><h3><b>LÒ NƯỚNG CAO CẤP</b></h3></div>
+        <section class="row mb-5" ng-controller="myCtrlSP_CC">
+          <div class="col-sm-4" ng-repeat="CC in LoNuongCC">
+            <div class="card">
+              <img class="card-img-top" src="{{CC.hinh}}" alt="Card image">
+              <div class="card-body">
+                <h3 class="card-title">{{CC.tensp}}</h3>
+                <p class="card-text"><b>{{CC.gia}}</b></p>
+                <a href="#" class="btn btn-primary">Xem sản phẩm</a>
+              </div>
+            </div> 
+          </div>                        
+        </section>
+
+        <section class="row mt-5 mb-5" ng-controller="myCtrl">
+          <div class="col-sm-6 giftCard" ng-repeat="qua in QuaTang"><img src="{{qua.hinh}}" alt=""></div>
+        </section>
+  
+    </div>
+    
+    <footer>
+      <div class="container">
+        <div class="row" ng-controller="myCtrl6">
+          <div class="col-sm-3 p-4" ng-repeat="ft in Footer">           
+            <h5><b>{{ft.title}}</b></h5>
+              <p>{{ft.nd1}}</p>
+              <p>{{ft.nd2}}</p>
+              <p>{{ft.nd3}}</p>             
+           </div>           
+          </div>
+        </div>
+      </div>
+    </footer>  
+</body>
+
+</html>
+
+<script src="js/index.js"></script>

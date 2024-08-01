@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết SP</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="css/chitietsp.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="myApp">
+  <header>
+    <nav class="navbar navTop navbar-expand-sm mb-0">
+      <div class="container-fluid">
+        <a class="navbar-brand text_logo px-2 mx-3" href="#"><b>HOUSE</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item px-5">
+              <a class="nav-link" href="Trangchu.html">Trang chủ</a>
+            </li>
+            <li class="nav-item px-5">
+              <a class="nav-link" href="SanPham.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <form class="d-flex mt-2">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn bg-light" type="button"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+            <li class="nav-item px-5">
+              <a class="nav-link" href="DangNhap.html">Tài khoản</a>
+            </li>
+            <li class="nav-item px-5">
+              <a class="nav-link" href="LichSuMua.html">Lịch sử mua</a>
+            </li>
+            <li class="nav-item px-5">
+              <a class="nav-link" href="">Hỗ trợ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-5">
+    <section class="row sectionctiet">
+      <div class="col-sm-7">
+
+        <div id="demo" class="carousel" data-bs-ride="carousel" ng-controller="myCtrlcrsCT">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+          </div>
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active" ng-repeat="cr in CarouselCT">
+              <img src="{{cr.hinh}}" alt="" class="d-block">
+            </div>
+          </div>
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <table class="table table-bordered bottom_img mt-5" ng-controller="myCtrl_CS">
+          <tr ng-repeat="cs in ChinhSach">
+            <td>
+              <p><i class="fa fa-calendar-check-o"></i> {{cs.nd}}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-sm-5">
+        <div class="text_chitiet">
+          <b>Điện thoại iPhone 14 Pro Max</b>
+          <div class="d-flex p-0 mt-4 mb-4 text-dark">
+            <div class="p-2 border">128GB</div>
+            <div class="p-2 border mx-2">256GB</div>
+            <div class="p-2 border">512GB</div>
+          </div>
+          <p>Giá: <span>27.490.000₫</span> <del> 29.590.000₫</del></p>
+
+          <table class="table table-bordered bottom_img mt-5" ng-controller="myCtrl_KM">
+            <tr ng-repeat="km in KhuyenMai">
+              <td>
+                <p><b>{{km.title}}</b></p>
+                <p>{{km.nd1}}</p>
+                <p>{{km.nd2}}</p>
+                <p>{{km.nd3}}</p>
+              </td>
+            </tr>
+          </table>
+
+          <button type="button" class="btn text-dark muangay" data-bs-toggle="modal" data-bs-target="#Modal">MUA
+            NGAY</button>
+          <!-- The Modal -->
+          <div class="modal" id="Modal" ng-contrller="myCtrla">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title"></h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form action="">
+                    <div class="mb-1">
+                      <div class="row">
+                        <div class="col-sm-3 sanpham">
+                          <img src="img/tiim.jpeg" alt="">
+                         
+                        </div>
+                        <div class="col-sm-6 pt-3">
+                          <strong>Điện thoại iPhone 14 Pro Max</strong>
+                          <p>Màu: Tím</p>
+                        </div>
+                        <div class="col-sm-3 pt-3">                    
+                          <p> <strong style="color: red;">27.490.000₫</strong> <br><del> 29.590.000₫</del></p>
+                          <div class="d-flex mt-1">
+                            <div><input type="number" value="1" placeholder="1" class="w-75" ng-model="sl"></div>
+                          </div>                  
+
+                        </div>
+                      </div>
+                    </div>
+                    <hr style="border: 1px solid gray;">
+                    <h5>THÔNG TIN KHÁCH HÀNG</h5>
+                    <input class="form-check-input mb-4" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                      value="option1"> Anh
+                    <input class="form-check-input mb-4" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                      value="option1"> Chị
+                    <div class="row">
+                      <div class="col-sm-6">
+
+                        <input type="text" class="form-control mb-4" id="tensp" placeholder="Họ và tên">
+                        <input class="form-check-input" type="radio" name="" id="flexRadioDefault1"> Giao tận nơi
+                        <input type="text" class="form-control mb-4" id="tensp" placeholder="Nhập địa chỉ">
+                        <label for="">Yêu cầu khác(Không bắt buộc)</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> Gọi người khác
+                          nhận hàng
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> Chuyển dữ liệu
+                          qua máy mới
+                        </div>
+
+                      </div>
+
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control mb-4" id="tensp" placeholder="Số điện thoại">
+                        <input class="form-check-input" type="radio" name="" id="flexRadioDefault2"> Nhận tại cửa hàng
+                        <select class="form-select" aria-label="Default select example mb-3" id="danhmuc"
+                          style="height: 35px; font-size: 14px;">
+                          <option value="" disabled selected>Chọn cửa hàng</option>
+                          <option value="1">Quận 1</option>
+                          <option value="2">Quận 3</option>
+                          <option value="3">Quận 5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+                      <div class="col-sm-9"><strong>Tổng tiền:</strong></div>
+                      <div class="col-sm-3">
+                        <p class="text-danger"><strong>27.490.000VND</strong></p>
+                      </div>
+                    </div>
+
+                    <div class="row mt-5">
+                      <div class="col-sm-12">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> Tôi đồng ý với
+                        Chính sách xử lý
+                        dữ liệu cá nhân của cửa hàng
+                        <button class="Dathang mt-4">ĐẶT HÀNG</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="gop0 my-2">MUA TRẢ GÓP 0%</button>
+          <button class="gopthe my-2">TRẢ GÓP QUA THẺ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nav tabs -->
+    <section class="row mt-5" ng-controller="myCtrl_CTSP">
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs" role="tablist">
+
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home"> Chi tiết sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu1"> Bình luận</a>
+          </li>
+
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content tab_boder">
+          <div id="home" class="container tab-pane active">
+            <div class="chitiet">
+              <div class="col-sm-3" ng-repeat="ct in ChiTiet">
+                <h5><b>{{ct.title}}</b></h5>
+                <p>{{ct.nd1}}</p>
+                <p>{{ct.nd2}}</p>
+                <p>{{ct.nd3}}</p>
+                <p>{{ct.nd4}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="menu1" class="container tab-pane">
+            <div class="binhluan py-3">Không có bình luận nào</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row mt-5" ng-controller="myCtrl_MC">
+      <div class="spmuacung py-2">
+        <h4><b>Sản phẩm thường mua cùng</b> </h4>
+      </div>
+      <div class="col-sm-3" ng-repeat="mc in MuaCung">
+        <div class="card">
+          <img class="card-img-top" src="{{mc.hinh}}" alt="Card image">
+          <div class="card-body">
+            <h3 class="card-title">{{mc.tensp}}</h3>
+            <p class="card-text"><b>{{mc.gia}}</b></p>
+            <a href="#" class="btn btn-primary">Xem sản phẩm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container mt-5">
+      <div class="row" ng-controller="myCtrl6">
+        <div class="col-sm-3 p-4" ng-repeat="ft in Footer">
+          <h5><b>{{ft.title}}</b></h5>
+          <p>{{ft.nd1}}</p>
+          <p>{{ft.nd2}}</p>
+          <p>{{ft.nd3}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+<script src="js/index.js"></script>
+<!-- <script src="js/thanhtien.js"></script> -->
